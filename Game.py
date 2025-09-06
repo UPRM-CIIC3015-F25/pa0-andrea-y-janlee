@@ -136,3 +136,7 @@ while True:
     # Update display
     pygame.display.flip()
     clock.tick(60)  # Maintain 60 frames per second
+
+    pygame.init()
+    pygame.mixer.init()
+    pygame.mixer.music.load('anakins_betrayal.wav')
