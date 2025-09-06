@@ -32,6 +32,7 @@ def ball_movement():
         ball_speed_y = -ball_speed_y
         hit_sound.play()
 
+
     # Ball collision with top boundary
     if ball.top <= 0:
         ball_speed_y *= -1  # Reverse ball's vertical direction
@@ -136,3 +137,5 @@ while True:
     # Update display
     pygame.display.flip()
     clock.tick(60)  # Maintain 60 frames per second
+
+
