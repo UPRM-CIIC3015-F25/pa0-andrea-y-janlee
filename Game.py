@@ -25,7 +25,7 @@ def ball_movement():
             score += 1  # Increase player score by 1
             ball_speed_y *= -1  # Reverse ball's vertical direction
             # TODO Task 6: Add sound effects HERE
-    pygame.mixer.init()  # start the sound system
+    pygame.mixer.init()
     hit_sound = pygame.mixer.Sound("pong_hit2.wav")
     hit_sound.set_volume(1.0)
     if ball.colliderect(player):
