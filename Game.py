@@ -1,5 +1,5 @@
 import pygame, sys, random
-
+from pygame import mixer
 def ball_movement():
     """
     Handles the movement of the ball and collision detection with the player and screen boundaries.
@@ -96,6 +96,11 @@ player_speed = 0
 score = 0
 basic_font = pygame.font.Font('freesansbold.ttf', 32)  # Font for displaying score
 
+mixer.init()
+mixer.music.load('anakin_betrayal.mp3')
+mixer.music.set_volume(0.7)
+mixer.music.play(-1)
+
 start = False  # Indicates if the game has started
 
 # Main game loop
@@ -137,5 +142,7 @@ while True:
     # Update display
     pygame.display.flip()
     clock.tick(60)  # Maintain 60 frames per second
+
+
 
 
