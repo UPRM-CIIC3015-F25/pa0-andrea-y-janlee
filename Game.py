@@ -101,6 +101,28 @@ mixer.music.load('anakin_betrayal.mp3')
 mixer.music.set_volume(0.7)
 mixer.music.play(-1)
 
+pygame.init()
+pygame.mixer.init()
+score_sfx = pygame.mixer.Sound('level_up.wav')
+score_sfx.set_volume(0.7)
+
+left_score = 0
+right_score = 0
+target = 10
+
+while True:
+     if ball.right < 10:
+         right_score += 1
+         if right_score == target:
+           score_sfx.play()
+
+     if ball.left > screen_width:
+         left_score += 1
+         if left_score == target:
+           score_sfx.play()
+
+
+
 start = False  # Indicates if the game has started
 
 # Main game loop
